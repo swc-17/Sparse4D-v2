@@ -46,7 +46,7 @@ model = dict(
     ),
     head=dict(
         type="Sparse4DHead",
-        cls_threshold_to_reg=0.05,
+        cls_threshold_to_reg=0.01,
         num_decoder=num_decoder,
         instance_bank=dict(
             type="InstanceBank",
@@ -263,4 +263,4 @@ vis_pipeline = [
 total_epochs = 24
 evaluation = dict(interval=24, pipeline=vis_pipeline)
 runner = dict(type='EpochBasedRunner', max_epochs=total_epochs)
-load_from='fcos3d.pth'
+load_from='ckpts/fcos3d.pth'
