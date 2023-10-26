@@ -185,8 +185,6 @@ class NuScenes3DDetTrackDataset(Custom3DDataset):
         self.last_id = None
         if with_seq_flag:
             self._set_sequence_group_flag()
-        self.time = 0.
-        self.sum = 0.
 
     def _set_sequence_group_flag(self):
         """
